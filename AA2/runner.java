@@ -23,7 +23,7 @@ public class runner{
         H2.keys.add(13);
         H2.keys.add(14);
 
-        H2.isLeaf = false;
+        H2.isLeaf = true;
         H2.parent = root;
 
         Node H3 = new Node();
@@ -35,14 +35,6 @@ public class runner{
         H3.isLeaf = true;
         H3.parent = root;
 
-        /*Node H4 = new Node();
-        H4.keys.add(-1);
-        H4.keys.add(-2);
-
-        H4.isLeaf = true;
-        H4.parent = root;
-
-        H1.children.add(H4);*/
         root.children.add(H1);
         root.children.add(H2);
         root.children.add(H3);
@@ -62,6 +54,8 @@ public class runner{
         System.out.println(tree.eje6());
         
         System.out.println(tree.eje7());
+
+        System.out.println("Resultado final: " + (tree.allNodesInOrder() && tree.eje2() && tree.eje3() && tree.eje4() && tree.eje5() && tree.eje6() && tree.eje7()));
 
         
     }
